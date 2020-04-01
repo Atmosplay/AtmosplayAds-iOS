@@ -1,4 +1,51 @@
 [See the English Guide](https://github.com/Atmosplay/AtmosplayAds-iOS/wiki)
+   * [入门指南](#入门指南)
+   * [前提条件](#前提条件)
+   * [导入移动广告 SDK](#导入移动广告-sdk)
+      * [CocoaPods（首选）](#cocoapods首选)
+      * [手动下载](#手动下载)
+      * [应用传输安全](#应用传输安全)
+   * [Ad Formats](#ad-formats)
+      * [横幅](#横幅)
+         * [创建 AtmosplayBanner](#创建-atmosplaybanner)
+         * [Banner 尺寸](#banner-尺寸)
+         * [请求 Banner](#请求-banner)
+         * [实现 AtmosplayBannerDelegate](#实现-atmosplaybannerdelegate)
+         * [销毁 Banner](#销毁-banner)
+      * [插屏](#插屏)
+         * [创建和加载 AtmosplayInterstitial](#创建和加载-atmosplayinterstitial)
+         * [展示插屏](#展示插屏)
+         * [实现 AtmosplayInterstitialDelegate](#实现-atmosplayinterstitialdelegate)
+      * [激励视频](#激励视频)
+         * [创建并请求 AtmosplayRewardedVideo](#创建并请求-atmosplayrewardedvideo)
+         * [展示激励视频](#展示激励视频)
+         * [实现 AtmosplayRewardedVideoDelegate](#实现-atmosplayrewardedvideodelegate)
+      * [原生广告](#原生广告)
+         * [原生模版广告](#原生模版广告)
+            * [创建原生模版广告](#创建原生模版广告)
+            * [加载原生模版广告](#加载原生模版广告)
+            * [渲染并展示原生模版广告](#渲染并展示原生模版广告)
+            * [实现 AtmosplayNativeExpressAdDelegate](#实现-atmosplaynativeexpressaddelegate)
+         * [原生自渲染广告](#原生自渲染广告)
+            * [初始化 AtmosplayNative](#初始化-atmosplaynative)
+            * [加载原生自渲染广告](#加载原生自渲染广告)
+            * [渲染及展示原生广告](#渲染及展示原生广告)
+            * [实现 AtmosplayNativeDelegate](#实现-atmosplaynativedelegate)
+      * [浮标广告](#浮标广告)
+         * [初始化及请求](#初始化及请求)
+         * [展示浮标广告](#展示浮标广告)
+         * [更新浮标广告位置](#更新浮标广告位置)
+         * [其他方法](#其他方法)
+         * [实现浮标广告代理方法](#实现浮标广告代理方法)
+      * [窗口广告](#窗口广告)
+         * [初始化及请求](#初始化及请求-1)
+         * [展示窗口广告](#展示窗口广告)
+         * [更新窗口广告位置](#更新窗口广告位置)
+         * [其他方法](#其他方法-1)
+         * [实现窗口广告代理方法](#实现窗口广告代理方法)
+      * [Tools and Debugging](#tools-and-debugging)
+         * [GDPR](#gdpr)
+         * [Test ID](#test-id)
 
 # 入门指南
 
@@ -387,6 +434,208 @@ self.nativeAd.delegate = self;
 }
 ```
 
+## 浮标广告
+### 初始化及请求
+
+```objective-c
+  #import <AtmosplayAds/AtmosplayFloatAd.h>
+  @interface AtmosplayFloatAdViewController () <AtmosplayFloatAdDelegate>
+  @property (nonatomic) AtmosplayFloatAd *floatAd;
+  @end
+
+  @implementation AtmosplayFloatAdViewController
+  // 初始化及请求浮标广告
+  // AppID：平台申请的应用ID
+  // adUnitID：平台申请的广告位ID
+  // autoLoad: 是否自动加载下一条广告
+  self.floatAd = [[AtmosplayFloatAd alloc] initAndLoadAdWithAppID:@"Your_App_ID"
+                                                         adUnitID:@"Your_AdUniit_ID"
+                                                         autoLoad:YES];
+  self.floatAd.delegate = self;
+  @end
+```
+
+### 展示浮标广告
+```objective-c
+  // 展示浮标广告
+  // point：浮标原点坐标
+  // width：浮标宽度。高度由对应比例计算，无需设置。
+  // rootViewController：展示浮标广告的控制器
+
+  float x = 10.0;
+  float y = 10.0;
+  float width = 150;
+  if (self.floatAd.isReady) {
+    [self.floatAd showFloatAdWith:CGPointMake(x,y) width:width rootViewController:self];
+  }
+```
+
+### 更新浮标广告位置
+```objective-c
+  // 重设浮标广告位置
+  // point：浮标原点坐标
+  // width：浮标宽度。高度由对应比例计算，无需设置。
+  // rootViewController：展示浮标广告的控制器
+
+  float x = [self.xTextField.text floatValue];
+  float y = [self.yTextField.text floatValue];
+  float width = [self.widthTextField.text floatValue];
+    
+  [self.floatAd resetFloatAdFrameWith:CGPointMake(x, y) width:width rootViewController:self];
+```
+
+### 其他方法
+```objective-c
+  // 隐藏浮标广告
+  - (void)hiddenFloatAd;
+  
+  // 隐藏之后再次展示浮标广告
+  - (void)showAgainAfterHiding;
+  
+  // 销毁浮标广告
+  - (void)destroyFloatAd;
+```
+
+### 实现浮标广告代理方法
+```objective-c
+/// Tells the delegate that an ad has been successfully loaded.
+- (void)atmosplayFloatAdDidLoad:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidLoad"];
+}
+/// Tells the delegate that a request failed.
+- (void)atmosplayFloatAd:(AtmosplayFloatAd *)floatAd DidFailWithError:(NSError *)error {
+    NSString *errorString = [[NSString alloc] initWithFormat:@"DidFailWithError %@",error.description];
+    [self addLog:errorString];
+}
+/// Tells the delegate that the user should be rewarded.
+- (void)atmosplayFloatAdDidRewardUser:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidRewardUser"];
+}
+/// Tells the delegate that user starts playing the ad.
+- (void)atmosplayFloatAdDidStartPlaying:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidStartPlaying"];
+}
+/// Tells the delegate that the ad is being fully played.
+- (void)atmosplayFloatAdDidEndPlaying:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidEndPlaying"];
+}
+/// Tells the delegate that the landing page did present on the screen.
+- (void)atmosplayFloatAdDidPresentLandingPage:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidPresentLandingPage"];
+}
+/// Tells the delegate that the ad did animate off the screen.
+- (void)atmosplayFloatAdDidDismissScreen:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidDismissScreen"];
+}
+/// Tells the delegate that the ad is clicked
+- (void)atmosplayFloatAdDidClick:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidClick"];
+}
+```
+
+## 窗口广告
+### 初始化及请求
+```objective-c
+#import <AtmosplayAds/AtmosplayWindowAd.h>
+@interface AtmosplayWindowAdViewController () <AtmosplayWindowAdDelegate>
+@property (nonatomic) AtmosplayWindowAd *windowAd;
+@end
+
+// 初始化及请求窗口广告
+// AppID: 平台申请的应用ID
+// AdUnitID： 平台申请的广告位ID
+self.windowAd = [[AtmosplayWindowAd alloc] initAndLoadAdWithAppID:@"Your_App_ID" 
+                                                         adUnitID:@"Your_AdUnit_ID"];
+self.windowAd.delegate = self;
+```
+
+### 展示窗口广告
+```objective-c
+// 展示窗口广告
+// point：窗口广告原点坐标
+// width：窗口广告宽度。高度由对应比例计算，无需设置。
+// transformAngle： 窗口广告倾斜角度
+// rootViewController：展示窗口广告的控制器
+float x = 20.0;
+float y = 100.0;
+float angel = 5;
+float width = 150;
+    
+if (self.windowAd.isReady) {
+  [self.windowAd showWindowAdWith:CGPointMake(x, y)
+                            width:width
+                   transformAngle:angel
+               rootViewController:self];
+}
+```
+
+### 更新窗口广告位置
+```objective-c
+// 重设窗口广告位置
+// point：窗口广告原点坐标
+// width：窗口广告宽度。高度由对应比例计算，无需设置。
+// transformAngle： 窗口广告倾斜角度
+// rootViewController：展示窗口广告的控制器
+float x = 20.0;
+float y = 100.0;
+float angel = 5;
+float width = 150;
+[self.windowAd resetWindowAdFrameWith:CGPointMake(x, y) width:width transfromAngle:angel rootViewController:self];
+```
+
+### 其他方法
+```objective
+// 暂停窗口广告
+- (void)pauseVideo;
+// 恢复播放
+- (void)resumeVideo;
+// 隐藏窗口广告
+- (void)hiddenWindowAd;
+// 隐藏后再次展示窗口广告
+- (void)showAgainAfterHiding;
+// 销毁窗口广告
+- (void)destroyWindowAd;
+
+```
+
+### 实现窗口广告代理方法
+```objective-c
+#pragma mark - Float Ad Delegate
+/// Tells the delegate that an ad has been successfully loaded.
+- (void)atmosplayFloatAdDidLoad:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidLoad"];
+}
+/// Tells the delegate that a request failed.
+- (void)atmosplayFloatAd:(AtmosplayFloatAd *)floatAd DidFailWithError:(NSError *)error {
+    NSString *errorString = [[NSString alloc] initWithFormat:@"DidFailWithError %@",error.description];
+    [self addLog:errorString];
+}
+/// Tells the delegate that the user should be rewarded.
+- (void)atmosplayFloatAdDidRewardUser:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidRewardUser"];
+}
+/// Tells the delegate that user starts playing the ad.
+- (void)atmosplayFloatAdDidStartPlaying:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidStartPlaying"];
+}
+/// Tells the delegate that the ad is being fully played.
+- (void)atmosplayFloatAdDidEndPlaying:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidEndPlaying"];
+}
+/// Tells the delegate that the landing page did present on the screen.
+- (void)atmosplayFloatAdDidPresentLandingPage:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidPresentLandingPage"];
+}
+/// Tells the delegate that the ad did animate off the screen.
+- (void)atmosplayFloatAdDidDismissScreen:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidDismissScreen"];
+}
+/// Tells the delegate that the ad is clicked
+- (void)atmosplayFloatAdDidClick:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidClick"];
+}
+```
+
 ## Tools and Debugging
 ### GDPR
 
@@ -412,3 +661,5 @@ typedef enum : NSUInteger {
 | iOS | Native Managed Rendering | A650AB0D-7BFC-2A81-3066-D3170947C3DA | DC9E199C-7C0B-FBFC-7E5A-26E7B5EE6BB3 |
 | iOS | Native Self Rendering    | A650AB0D-7BFC-2A81-3066-D3170947C3DA | 25AED008-6B6F-BADB-F873-AE7CA61DFE98 |
 | iOS | Banner                   | A650AB0D-7BFC-2A81-3066-D3170947C3DA | A49521F3-339D-994F-FC80-F9C4170AA0CF |
+| iOS | 浮标广告                  | A650AB0D-7BFC-2A81-3066-D3170947C3DA | CF41E96F-D020-2AD1-9144-396D2585915E |
+| iOS | 窗口广告                  | A650AB0D-7BFC-2A81-3066-D3170947C3DA | 5D6D4B21-45B0-F76E-580C-F975B47C0388 |
