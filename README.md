@@ -391,6 +391,7 @@ self.nativeAd.delegate = self;
 ### 初始化及请求
 
 ```objective-c
+  #import <AtmosplayAds/AtmosplayFloatAd.h>
   @interface AtmosplayFloatAdViewController () <AtmosplayFloatAdDelegate>
   @property (nonatomic) AtmosplayFloatAd *floatAd;
   @end
@@ -450,6 +451,109 @@ self.nativeAd.delegate = self;
 
 ### 实现浮标广告代理方法
 ```objective-c
+/// Tells the delegate that an ad has been successfully loaded.
+- (void)atmosplayFloatAdDidLoad:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidLoad"];
+}
+/// Tells the delegate that a request failed.
+- (void)atmosplayFloatAd:(AtmosplayFloatAd *)floatAd DidFailWithError:(NSError *)error {
+    NSString *errorString = [[NSString alloc] initWithFormat:@"DidFailWithError %@",error.description];
+    [self addLog:errorString];
+}
+/// Tells the delegate that the user should be rewarded.
+- (void)atmosplayFloatAdDidRewardUser:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidRewardUser"];
+}
+/// Tells the delegate that user starts playing the ad.
+- (void)atmosplayFloatAdDidStartPlaying:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidStartPlaying"];
+}
+/// Tells the delegate that the ad is being fully played.
+- (void)atmosplayFloatAdDidEndPlaying:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidEndPlaying"];
+}
+/// Tells the delegate that the landing page did present on the screen.
+- (void)atmosplayFloatAdDidPresentLandingPage:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidPresentLandingPage"];
+}
+/// Tells the delegate that the ad did animate off the screen.
+- (void)atmosplayFloatAdDidDismissScreen:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidDismissScreen"];
+}
+/// Tells the delegate that the ad is clicked
+- (void)atmosplayFloatAdDidClick:(AtmosplayFloatAd *)floatAd {
+    [self addLog:@"atmosplayFloatAdDidClick"];
+}
+```
+
+## 窗口广告
+### 初始化及请求
+```objective-c
+#import <AtmosplayAds/AtmosplayWindowAd.h>
+@interface AtmosplayWindowAdViewController () <AtmosplayWindowAdDelegate>
+@property (nonatomic) AtmosplayWindowAd *windowAd;
+@end
+
+// 初始化及请求窗口广告
+// AppID: 平台申请的应用ID
+// AdUnitID： 平台申请的广告位ID
+self.windowAd = [[AtmosplayWindowAd alloc] initAndLoadAdWithAppID:@"Your_App_ID" 
+                                                         adUnitID:@"Your_AdUnit_ID"];
+self.windowAd.delegate = self;
+```
+
+### 展示窗口广告
+```objective-c
+// 展示窗口广告
+// point：窗口广告原点坐标
+// width：窗口广告宽度。高度由对应比例计算，无需设置。
+// transformAngle： 窗口广告倾斜角度
+// rootViewController：展示窗口广告的控制器
+float x = 20.0;
+float y = 100.0;
+float angel = 5;
+float width = 150;
+    
+if (self.windowAd.isReady) {
+  [self.windowAd showWindowAdWith:CGPointMake(x, y)
+                            width:width
+                   transformAngle:angel
+               rootViewController:self];
+}
+```
+
+### 更新窗口广告位置
+```objective-c
+// 重设窗口广告位置
+// point：窗口广告原点坐标
+// width：窗口广告宽度。高度由对应比例计算，无需设置。
+// transformAngle： 窗口广告倾斜角度
+// rootViewController：展示窗口广告的控制器
+float x = 20.0;
+float y = 100.0;
+float angel = 5;
+float width = 150;
+[self.windowAd resetWindowAdFrameWith:CGPointMake(x, y) width:width transfromAngle:angel rootViewController:self];
+```
+
+### 其他方法
+```objective
+// 暂停窗口广告
+- (void)pauseVideo;
+// 恢复播放
+- (void)resumeVideo;
+// 隐藏窗口广告
+- (void)hiddenWindowAd;
+// 隐藏后再次展示窗口广告
+- (void)showAgainAfterHiding;
+// 销毁窗口广告
+- (void)destroyWindowAd;
+
+```
+
+### 实现窗口广告代理方法
+```objective-c
+#pragma mark - Float Ad Delegate
 /// Tells the delegate that an ad has been successfully loaded.
 - (void)atmosplayFloatAdDidLoad:(AtmosplayFloatAd *)floatAd {
     [self addLog:@"atmosplayFloatAdDidLoad"];
