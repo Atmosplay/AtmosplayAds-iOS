@@ -29,9 +29,9 @@
 		5B96871C236C09A400A47ADE /* PADemoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B968707236C09A300A47ADE /* PADemoUtils.m */; };
 		5B994AC82439E48400ABF21F /* AtmosplayWindowAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B994AC42439E48400ABF21F /* AtmosplayWindowAdViewController.m */; };
 		5B994AC92439E48400ABF21F /* AtmosplayFloatAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B994AC72439E48400ABF21F /* AtmosplayFloatAdViewController.m */; };
+		5B994ACC243A13DC00ABF21F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B994ACA243A13DC00ABF21F /* Main.storyboard */; };
 		AEB5BEF57D42180192B115DD /* Pods_PlayableAdsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8092A57D989B719B59A183 /* Pods_PlayableAdsDemo.framework */; };
 		C758B4DC1FAFFBC8009CE8E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C758B4DB1FAFFBC8009CE8E9 /* AppDelegate.m */; };
-		C758B4E21FAFFBC8009CE8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C758B4E01FAFFBC8009CE8E9 /* Main.storyboard */; };
 		C758B4E41FAFFBC8009CE8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C758B4E31FAFFBC8009CE8E9 /* Assets.xcassets */; };
 		C758B4E71FAFFBC8009CE8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C758B4E51FAFFBC8009CE8E9 /* LaunchScreen.storyboard */; };
 		C758B4EA1FAFFBC8009CE8E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C758B4E91FAFFBC8009CE8E9 /* main.m */; };
@@ -93,11 +93,11 @@
 		5B994AC42439E48400ABF21F /* AtmosplayWindowAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayWindowAdViewController.m; sourceTree = "<group>"; };
 		5B994AC62439E48400ABF21F /* AtmosplayFloatAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtmosplayFloatAdViewController.h; sourceTree = "<group>"; };
 		5B994AC72439E48400ABF21F /* AtmosplayFloatAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayFloatAdViewController.m; sourceTree = "<group>"; };
+		5B994ACB243A13DC00ABF21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70511BFC20E9C25FCA44C77C /* Pods-PlayableAdsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdsDemo/Pods-PlayableAdsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C758B4D71FAFFBC8009CE8E9 /* PlayableAdsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayableAdsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C758B4DA1FAFFBC8009CE8E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C758B4DB1FAFFBC8009CE8E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C758B4E11FAFFBC8009CE8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C758B4E31FAFFBC8009CE8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C758B4E61FAFFBC8009CE8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C758B4E81FAFFBC8009CE8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,10 +233,10 @@
 		C758B4D91FAFFBC8009CE8E9 /* PlayableAdsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B994ACA243A13DC00ABF21F /* Main.storyboard */,
 				5B9686E1236C09A300A47ADE /* Demo */,
 				C758B4DA1FAFFBC8009CE8E9 /* AppDelegate.h */,
 				C758B4DB1FAFFBC8009CE8E9 /* AppDelegate.m */,
-				C758B4E01FAFFBC8009CE8E9 /* Main.storyboard */,
 				C758B4E31FAFFBC8009CE8E9 /* Assets.xcassets */,
 				C758B4E51FAFFBC8009CE8E9 /* LaunchScreen.storyboard */,
 				C758B4E81FAFFBC8009CE8E9 /* Info.plist */,
@@ -327,7 +327,7 @@
 				TargetAttributes = {
 					C758B4D61FAFFBC8009CE8E9 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					C758B4EE1FAFFBC8009CE8E9 = {
 						CreatedOnToolsVersion = 9.0;
@@ -363,9 +363,9 @@
 				5B968712236C09A300A47ADE /* PANativeAdTableViewCell.xib in Resources */,
 				C758B4E71FAFFBC8009CE8E9 /* LaunchScreen.storyboard in Resources */,
 				5B96870A236C09A300A47ADE /* PAStatisticsCell.xib in Resources */,
+				5B994ACC243A13DC00ABF21F /* Main.storyboard in Resources */,
 				C758B4E41FAFFBC8009CE8E9 /* Assets.xcassets in Resources */,
 				5B96870F236C09A300A47ADE /* PANativeExpressAdCell.xib in Resources */,
-				C758B4E21FAFFBC8009CE8E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,10 +501,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C758B4E01FAFFBC8009CE8E9 /* Main.storyboard */ = {
+		5B994ACA243A13DC00ABF21F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C758B4E11FAFFBC8009CE8E9 /* Base */,
+				5B994ACB243A13DC00ABF21F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -629,19 +629,19 @@
 			baseConfigurationReference = 09CF04BC11D43444CFDEB811 /* Pods-PlayableAdsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2019121602;
-				DEVELOPMENT_TEAM = L5UE3EGW93;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2020040501;
+				DEVELOPMENT_TEAM = QX37QM2334;
 				INFOPLIST_FILE = PlayableAdsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atmosplay.playableads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = DisAtmosplay;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -654,12 +654,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2019121602;
+				CURRENT_PROJECT_VERSION = 2020040501;
 				DEVELOPMENT_TEAM = L5UE3EGW93;
 				INFOPLIST_FILE = PlayableAdsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.atmosplay.playableads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = DisAtmosplay;
