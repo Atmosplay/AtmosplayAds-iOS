@@ -600,39 +600,35 @@ float width = 150;
 
 ### 实现窗口广告代理方法
 ```objective-c
-#pragma mark - Float Ad Delegate
+#pragma mark - window ad delegate
 /// Tells the delegate that an ad has been successfully loaded.
-- (void)atmosplayFloatAdDidLoad:(AtmosplayFloatAd *)floatAd {
-    [self addLog:@"atmosplayFloatAdDidLoad"];
+- (void)atmosplayWindowAdDidLoad:(AtmosplayWindowAd *)windowAd {
+    [self addLog:@"atmosplayWindowAdDidLoad"];
 }
 /// Tells the delegate that a request failed.
-- (void)atmosplayFloatAd:(AtmosplayFloatAd *)floatAd DidFailWithError:(NSError *)error {
-    NSString *errorString = [[NSString alloc] initWithFormat:@"DidFailWithError %@",error.description];
-    [self addLog:errorString];
-}
-/// Tells the delegate that the user should be rewarded.
-- (void)atmosplayFloatAdDidRewardUser:(AtmosplayFloatAd *)floatAd {
-    [self addLog:@"atmosplayFloatAdDidRewardUser"];
+- (void)atmosplayWindowAd:(AtmosplayWindowAd *)windowAd DidFailWithError:(NSError *)error {
+    NSString *errorStr = [[NSString alloc] initWithFormat:@"DidFailWithError,%@",error.description];
+    [self addLog:errorStr];
 }
 /// Tells the delegate that user starts playing the ad.
-- (void)atmosplayFloatAdDidStartPlaying:(AtmosplayFloatAd *)floatAd {
-    [self addLog:@"atmosplayFloatAdDidStartPlaying"];
+- (void)atmosplayWindowAdDidStartPlaying:(AtmosplayWindowAd *)windowAd {
+    [self addLog:@"atmosplayWindowAdDidStartPlaying"];
 }
 /// Tells the delegate that the ad is being fully played.
-- (void)atmosplayFloatAdDidEndPlaying:(AtmosplayFloatAd *)floatAd {
-    [self addLog:@"atmosplayFloatAdDidEndPlaying"];
+- (void)atmosplayWindowAdDidEndPlaying:(AtmosplayWindowAd *)windowAd {
+    [self addLog:@"atmosplayWindowAdDidEndPlaying"];
 }
-/// Tells the delegate that the landing page did present on the screen.
-- (void)atmosplayFloatAdDidPresentLandingPage:(AtmosplayFloatAd *)floatAd {
-    [self addLog:@"atmosplayFloatAdDidPresentLandingPage"];
+- (void)atmosplayWindowAdDidFailToPlay:(AtmosplayWindowAd *)windowAd {
+    [self addLog:@"atmosplayWindowAdDidFailToPlay"];
+    [self requestWindowAd];
 }
 /// Tells the delegate that the ad did animate off the screen.
-- (void)atmosplayFloatAdDidDismissScreen:(AtmosplayFloatAd *)floatAd {
-    [self addLog:@"atmosplayFloatAdDidDismissScreen"];
+- (void)atmosplayWindowAdDidDismissScreen:(AtmosplayWindowAd *)windowAd {
+    [self addLog:@"atmosplayWindowAdDidDismissScreen"];
 }
 /// Tells the delegate that the ad is clicked
-- (void)atmosplayFloatAdDidClick:(AtmosplayFloatAd *)floatAd {
-    [self addLog:@"atmosplayFloatAdDidClick"];
+- (void)atmosplayWindowAdDidClick:(AtmosplayWindowAd *)windowAd {
+    [self addLog:@"atmosplayWindowAdDidClick"];
 }
 ```
 
