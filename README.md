@@ -456,6 +456,12 @@ self.nativeAd.delegate = self;
 ```
 
 ### 展示浮标广告
+此方法将浮标广告添加到用户屏幕上。
+注意：
+1. 初始化后的第一次展示请调用此方法。
+2. 如需更新位置，请调用 `resetFloatAdFrameWith:width:rootViewController:`，
+3. 如隐藏后再次展示，请调用 `showAgainAfterHiding`
+
 ```objective-c
   // 展示浮标广告，请先设置浮标广告展示的位置坐标和浮标的宽
   // point：浮标原点坐标
@@ -490,6 +496,7 @@ self.nativeAd.delegate = self;
   - (void)hiddenFloatAd;
   
   // 隐藏之后再次展示浮标广告
+  // 此方法仅适用于隐藏后的再次展示。
   - (void)showAgainAfterHiding;
   
   // 销毁浮标广告
@@ -550,6 +557,12 @@ self.windowAd.delegate = self;
 ```
 
 ### 展示窗口广告
+此方法将窗口广告添加到用户屏幕上。
+注意：
+1. 初始化后的第一次展示请调用此方法 
+2. 如需更新位置，请调用 `resetWindowAdFrameWith:width:rootViewController:`
+3. 如隐藏后再次展示，请调用 `showAgainAfterHiding`
+
 ```objective-c
 // 展示窗口广告，请先设置窗口广告展示的位置坐标和窗口的宽
 // point：窗口广告原点坐标
@@ -592,6 +605,7 @@ float width = 150;
 // 隐藏窗口广告
 - (void)hiddenWindowAd;
 // 隐藏后再次展示窗口广告
+// 此方法仅适用于隐藏后的再次展示 
 - (void)showAgainAfterHiding;
 // 销毁窗口广告
 - (void)destroyWindowAd;
@@ -618,6 +632,9 @@ float width = 150;
 - (void)atmosplayWindowAdDidEndPlaying:(AtmosplayWindowAd *)windowAd {
     [self addLog:@"atmosplayWindowAdDidEndPlaying"];
 }
+// 注意：
+// 如接受到展示失败的回调，请先调用 `destroyWindowAd`
+// 再重新初始化窗口广告对象，接受到 `atmosplayWindowAdDidLoad:` 回调后，在合适的时机再次展示窗口广告。
 - (void)atmosplayWindowAdDidFailToPlay:(AtmosplayWindowAd *)windowAd {
     [self addLog:@"atmosplayWindowAdDidFailToPlay"];
     [self requestWindowAd];
