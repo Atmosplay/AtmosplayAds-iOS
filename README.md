@@ -558,6 +558,7 @@ self.windowAd.delegate = self;
 
 ### 展示窗口广告
 此方法将窗口广告添加到用户屏幕上。
+
 注意：
 1. 初始化后的第一次展示请调用此方法 
 2. 如需更新位置，请调用 `resetWindowAdFrameWith:width:rootViewController:`
