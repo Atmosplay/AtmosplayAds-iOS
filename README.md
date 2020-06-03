@@ -605,9 +605,7 @@ if (self.windowAd.isReady) {
 - (void)atmosplayWindowAdDidEndPlaying:(AtmosplayWindowAd *)windowAd {
     [self addLog:@"atmosplayWindowAdDidEndPlaying"];
 }
-// 注意：
-// 如接受到展示失败的回调，请先调用 `destroyWindowAd`
-// 再重新初始化窗口广告对象，接受到 `atmosplayWindowAdDidLoad:` 回调后，在合适的时机再次展示窗口广告。
+/// Tells the delegate that the ad is fail to play.
 - (void)atmosplayWindowAdDidFailToPlay:(AtmosplayWindowAd *)windowAd {
     [self addLog:@"atmosplayWindowAdDidFailToPlay"];
     [self requestWindowAd];
