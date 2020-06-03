@@ -720,7 +720,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input HTML url or AD_ID" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-CJ-hUE">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input HTML url or AD_ID" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-CJ-hUE">
                                 <rect key="frame" x="40" y="59" width="169" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="tdU-8w-y5e"/>
@@ -728,7 +728,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpB-YQ-nWu">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpB-YQ-nWu">
                                 <rect key="frame" x="214" y="59" width="94" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="YaF-Lj-fPm"/>
@@ -738,11 +738,8 @@
                                 <state key="normal" title="Verify Assets">
                                     <color key="titleColor" red="0.1764705882" green="0.42352941179999998" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="previewAction:" destination="Hty-ls-qNd" eventType="touchUpInside" id="OTu-RG-UYn"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LandingPage url" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kc1-Q7-bZV">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LandingPage url" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kc1-Q7-bZV">
                                 <rect key="frame" x="40" y="109" width="169" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -752,15 +749,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOd-dt-q2w">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOd-dt-q2w">
                                 <rect key="frame" x="214" y="109" width="94" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="LandingPage">
                                     <color key="titleColor" red="0.1764705882" green="0.42352941179999998" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="landingPageAction:" destination="Hty-ls-qNd" eventType="touchUpInside" id="ZSB-6M-zST"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFM-58-R51">
                                 <rect key="frame" x="118" y="254" width="80" height="30"/>
@@ -893,11 +887,7 @@
                     <connections>
                         <outlet property="adUnitTextField" destination="MoL-wa-S8V" id="ZfH-0i-Tv0"/>
                         <outlet property="appIdTextField" destination="4If-gS-bNE" id="O3p-6S-H6g"/>
-                        <outlet property="landingPageBtn" destination="GOd-dt-q2w" id="u4r-zz-NDT"/>
-                        <outlet property="landingPageField" destination="Kc1-Q7-bZV" id="nAn-kF-vSX"/>
                         <outlet property="logTextView" destination="zSP-X6-Fr0" id="ojn-sf-wJd"/>
-                        <outlet property="previewBtn" destination="zpB-YQ-nWu" id="g8V-oq-BpC"/>
-                        <outlet property="previewTextField" destination="M9D-CJ-hUE" id="dKh-24-BwZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SgE-ET-UFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -928,6 +918,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Z3I-0V-N8c"/>
-        <segue reference="rMe-h9-ria"/>
+        <segue reference="D8y-Ha-eFL"/>
     </inferredMetricsTieBreakers>
 </document>

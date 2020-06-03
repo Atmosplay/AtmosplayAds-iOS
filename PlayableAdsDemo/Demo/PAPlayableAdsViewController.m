@@ -120,7 +120,7 @@
 }
 
 - (IBAction)requestAdAction:(UIButton *)sender {
-    if (!self.rewardedVideo || self.interstitial) {
+    if ((self.isVideo && !self.rewardedVideo) || (!self.isVideo && !self.interstitial)) {
         [self addLog:@"please init playable ad "];
         return;
     }
@@ -132,12 +132,12 @@
     }
 }
 - (IBAction)presentAdAction:(UIButton *)sender {
-    if (!self.rewardedVideo || self.interstitial) {
+    if ((self.isVideo && !self.rewardedVideo) || (!self.isVideo && !self.interstitial)) {
         [self addLog:@"playableAd is nil"];
         return;
     }
 
-    if (!self.rewardedVideo.isReady || !self.interstitial.isReady) {
+    if ((self.isVideo && !self.rewardedVideo.isReady) || (!self.isVideo && !self.interstitial.isReady)) {
         [self addLog:@"playableAd is not ready"];
         return;
     }

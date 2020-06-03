@@ -7,8 +7,8 @@
 //
 
 #import "PANativeExpressAdCell.h"
-#import <AtmosplayAds/AtmosplayNativeExpressAd.h>
 #import <Masonry/Masonry.h>
+#import <AtmosplayAds/AtmosplayNativeExpressAd.h>
 
 @interface PANativeExpressAdCell ()
 
@@ -23,7 +23,7 @@
     if ([expressAdView isKindOfClass:[PANativeExpressAdView class]]) {
         self.titleLab.text = nil;
         self.desLab.text = nil;
-        
+
         [expressAdView reportImpressionNativeExpressAd];
         CGSize size = ((PANativeExpressAdView *)expressAdView).bounds.size;
         [self addSubview:expressAdView];

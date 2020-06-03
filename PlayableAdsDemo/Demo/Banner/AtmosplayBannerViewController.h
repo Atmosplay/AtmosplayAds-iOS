@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AtmosplayAdsBannerViewController : UIViewController
+@interface AtmosplayBannerViewController : UIViewController
 
 @end
 

@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B968709236C09A300A47ADE /* PAStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686E3236C09A300A47ADE /* PAStatisticsViewController.m */; };
-		5B96870A236C09A300A47ADE /* PAStatisticsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9686E4236C09A300A47ADE /* PAStatisticsCell.xib */; };
-		5B96870B236C09A300A47ADE /* PAStatisticsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686E5236C09A300A47ADE /* PAStatisticsCell.m */; };
-		5B96870C236C09A300A47ADE /* PAGDPRSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686E8236C09A300A47ADE /* PAGDPRSwitchCell.m */; };
-		5B96870D236C09A300A47ADE /* PAShowNativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686EE236C09A300A47ADE /* PAShowNativeAdViewController.m */; };
-		5B96870E236C09A300A47ADE /* PANativeExpressAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686F0236C09A300A47ADE /* PANativeExpressAdCell.m */; };
-		5B96870F236C09A300A47ADE /* PANativeExpressAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9686F1236C09A300A47ADE /* PANativeExpressAdCell.xib */; };
-		5B968710236C09A300A47ADE /* PANativeExpressAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686F3236C09A300A47ADE /* PANativeExpressAdViewController.m */; };
-		5B968711236C09A300A47ADE /* PANativeAdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686F4236C09A300A47ADE /* PANativeAdTableViewCell.m */; };
-		5B968712236C09A300A47ADE /* PANativeAdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9686F5236C09A300A47ADE /* PANativeAdTableViewCell.xib */; };
-		5B968713236C09A300A47ADE /* PAAdAutoModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686F6236C09A300A47ADE /* PAAdAutoModelCell.m */; };
-		5B968714236C09A300A47ADE /* PAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686F7236C09A300A47ADE /* PAMenuViewController.m */; };
-		5B968715236C09A300A47ADE /* PATestModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686F9236C09A300A47ADE /* PATestModelCell.m */; };
-		5B968716236C09A300A47ADE /* PAPlayableAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686FB236C09A300A47ADE /* PAPlayableAdsViewController.m */; };
-		5B968717236C09A300A47ADE /* AtmosplayAdsBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686FD236C09A300A47ADE /* AtmosplayAdsBannerViewController.m */; };
-		5B968718236C09A300A47ADE /* PASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686FE236C09A300A47ADE /* PASettingsViewController.m */; };
-		5B968719236C09A400A47ADE /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9686FF236C09A300A47ADE /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m */; };
-		5B96871A236C09A400A47ADE /* PARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B968703236C09A300A47ADE /* PARootViewController.m */; };
-		5B96871B236C09A400A47ADE /* PAChannelIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B968705236C09A300A47ADE /* PAChannelIDCell.m */; };
-		5B96871C236C09A400A47ADE /* PADemoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B968707236C09A300A47ADE /* PADemoUtils.m */; };
-		5B994AC82439E48400ABF21F /* AtmosplayWindowAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B994AC42439E48400ABF21F /* AtmosplayWindowAdViewController.m */; };
-		5B994AC92439E48400ABF21F /* AtmosplayFloatAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B994AC72439E48400ABF21F /* AtmosplayFloatAdViewController.m */; };
+		5B61AF2A248745DB0040A599 /* PAStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AEFD248745DB0040A599 /* PAStatisticsViewController.m */; };
+		5B61AF2B248745DB0040A599 /* PAStatisticsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B61AEFE248745DB0040A599 /* PAStatisticsCell.xib */; };
+		5B61AF2C248745DB0040A599 /* PAStatisticsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AEFF248745DB0040A599 /* PAStatisticsCell.m */; };
+		5B61AF2D248745DB0040A599 /* PAGDPRSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF02248745DB0040A599 /* PAGDPRSwitchCell.m */; };
+		5B61AF2E248745DB0040A599 /* PAShowNativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF08248745DB0040A599 /* PAShowNativeAdViewController.m */; };
+		5B61AF2F248745DB0040A599 /* PANativeExpressAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF0A248745DB0040A599 /* PANativeExpressAdCell.m */; };
+		5B61AF30248745DB0040A599 /* PANativeExpressAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B61AF0B248745DB0040A599 /* PANativeExpressAdCell.xib */; };
+		5B61AF31248745DB0040A599 /* PANativeExpressAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF0D248745DB0040A599 /* PANativeExpressAdViewController.m */; };
+		5B61AF32248745DB0040A599 /* PANativeAdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF0E248745DB0040A599 /* PANativeAdTableViewCell.m */; };
+		5B61AF33248745DB0040A599 /* PANativeAdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B61AF0F248745DB0040A599 /* PANativeAdTableViewCell.xib */; };
+		5B61AF34248745DB0040A599 /* PAAdAutoModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF10248745DB0040A599 /* PAAdAutoModelCell.m */; };
+		5B61AF35248745DB0040A599 /* PAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF11248745DB0040A599 /* PAMenuViewController.m */; };
+		5B61AF36248745DB0040A599 /* AtmosplayFloatAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF14248745DB0040A599 /* AtmosplayFloatAdViewController.m */; };
+		5B61AF37248745DB0040A599 /* PATestModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF16248745DB0040A599 /* PATestModelCell.m */; };
+		5B61AF38248745DB0040A599 /* PAPlayableAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF18248745DB0040A599 /* PAPlayableAdsViewController.m */; };
+		5B61AF39248745DB0040A599 /* AtmosplayWindowAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF1B248745DB0040A599 /* AtmosplayWindowAdViewController.m */; };
+		5B61AF3A248745DB0040A599 /* PASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF1D248745DB0040A599 /* PASettingsViewController.m */; };
+		5B61AF3B248745DB0040A599 /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF1E248745DB0040A599 /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m */; };
+		5B61AF3C248745DB0040A599 /* PARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF22248745DB0040A599 /* PARootViewController.m */; };
+		5B61AF3D248745DB0040A599 /* PAChannelIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF24248745DB0040A599 /* PAChannelIDCell.m */; };
+		5B61AF3E248745DB0040A599 /* PADemoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF25248745DB0040A599 /* PADemoUtils.m */; };
+		5B61AF3F248745DB0040A599 /* AtmosplayBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B61AF28248745DB0040A599 /* AtmosplayBannerViewController.m */; };
 		5B994ACC243A13DC00ABF21F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B994ACA243A13DC00ABF21F /* Main.storyboard */; };
 		AEB5BEF57D42180192B115DD /* Pods_PlayableAdsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8092A57D989B719B59A183 /* Pods_PlayableAdsDemo.framework */; };
 		C758B4DC1FAFFBC8009CE8E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C758B4DB1FAFFBC8009CE8E9 /* AppDelegate.m */; };
@@ -52,47 +52,47 @@
 /* Begin PBXFileReference section */
 		09CF04BC11D43444CFDEB811 /* Pods-PlayableAdsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdsDemo/Pods-PlayableAdsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		136CA88829B5A679859D6775 /* Pods-PlayableAdsDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdsDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdsDemoTests/Pods-PlayableAdsDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5B9686E3236C09A300A47ADE /* PAStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAStatisticsViewController.m; sourceTree = "<group>"; };
-		5B9686E4236C09A300A47ADE /* PAStatisticsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAStatisticsCell.xib; sourceTree = "<group>"; };
-		5B9686E5236C09A300A47ADE /* PAStatisticsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAStatisticsCell.m; sourceTree = "<group>"; };
-		5B9686E6236C09A300A47ADE /* PAStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAStatisticsViewController.h; sourceTree = "<group>"; };
-		5B9686E7236C09A300A47ADE /* PAStatisticsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAStatisticsCell.h; sourceTree = "<group>"; };
-		5B9686E8236C09A300A47ADE /* PAGDPRSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAGDPRSwitchCell.m; sourceTree = "<group>"; };
-		5B9686E9236C09A300A47ADE /* NSException+ AtmosplayDisableUIKVCAccessProhibited.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+ AtmosplayDisableUIKVCAccessProhibited.h"; sourceTree = "<group>"; };
-		5B9686EA236C09A300A47ADE /* PASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PASettingsViewController.h; sourceTree = "<group>"; };
-		5B9686EC236C09A300A47ADE /* PANativeExpressAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANativeExpressAdCell.h; sourceTree = "<group>"; };
-		5B9686ED236C09A300A47ADE /* PANativeExpressAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANativeExpressAdViewController.h; sourceTree = "<group>"; };
-		5B9686EE236C09A300A47ADE /* PAShowNativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAShowNativeAdViewController.m; sourceTree = "<group>"; };
-		5B9686EF236C09A300A47ADE /* PANativeAdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANativeAdTableViewCell.h; sourceTree = "<group>"; };
-		5B9686F0236C09A300A47ADE /* PANativeExpressAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANativeExpressAdCell.m; sourceTree = "<group>"; };
-		5B9686F1236C09A300A47ADE /* PANativeExpressAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PANativeExpressAdCell.xib; sourceTree = "<group>"; };
-		5B9686F2236C09A300A47ADE /* PAShowNativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAShowNativeAdViewController.h; sourceTree = "<group>"; };
-		5B9686F3236C09A300A47ADE /* PANativeExpressAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANativeExpressAdViewController.m; sourceTree = "<group>"; };
-		5B9686F4236C09A300A47ADE /* PANativeAdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANativeAdTableViewCell.m; sourceTree = "<group>"; };
-		5B9686F5236C09A300A47ADE /* PANativeAdTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PANativeAdTableViewCell.xib; sourceTree = "<group>"; };
-		5B9686F6236C09A300A47ADE /* PAAdAutoModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAdAutoModelCell.m; sourceTree = "<group>"; };
-		5B9686F7236C09A300A47ADE /* PAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAMenuViewController.m; sourceTree = "<group>"; };
-		5B9686F8236C09A300A47ADE /* PAChannelIDCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAChannelIDCell.h; sourceTree = "<group>"; };
-		5B9686F9236C09A300A47ADE /* PATestModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PATestModelCell.m; sourceTree = "<group>"; };
-		5B9686FA236C09A300A47ADE /* PARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PARootViewController.h; sourceTree = "<group>"; };
-		5B9686FB236C09A300A47ADE /* PAPlayableAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPlayableAdsViewController.m; sourceTree = "<group>"; };
-		5B9686FC236C09A300A47ADE /* PADemoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADemoUtils.h; sourceTree = "<group>"; };
-		5B9686FD236C09A300A47ADE /* AtmosplayAdsBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayAdsBannerViewController.m; sourceTree = "<group>"; };
-		5B9686FE236C09A300A47ADE /* PASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PASettingsViewController.m; sourceTree = "<group>"; };
-		5B9686FF236C09A300A47ADE /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+ AtmosplayDisableUIKVCAccessProhibited.m"; sourceTree = "<group>"; };
-		5B968700236C09A300A47ADE /* PAGDPRSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAGDPRSwitchCell.h; sourceTree = "<group>"; };
-		5B968701236C09A300A47ADE /* PAAdAutoModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAdAutoModelCell.h; sourceTree = "<group>"; };
-		5B968702236C09A300A47ADE /* PAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAMenuViewController.h; sourceTree = "<group>"; };
-		5B968703236C09A300A47ADE /* PARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PARootViewController.m; sourceTree = "<group>"; };
-		5B968704236C09A300A47ADE /* PATestModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PATestModelCell.h; sourceTree = "<group>"; };
-		5B968705236C09A300A47ADE /* PAChannelIDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAChannelIDCell.m; sourceTree = "<group>"; };
-		5B968706236C09A300A47ADE /* AtmosplayAdsBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtmosplayAdsBannerViewController.h; sourceTree = "<group>"; };
-		5B968707236C09A300A47ADE /* PADemoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADemoUtils.m; sourceTree = "<group>"; };
-		5B968708236C09A300A47ADE /* PAPlayableAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPlayableAdsViewController.h; sourceTree = "<group>"; };
-		5B994AC32439E48400ABF21F /* AtmosplayWindowAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtmosplayWindowAdViewController.h; sourceTree = "<group>"; };
-		5B994AC42439E48400ABF21F /* AtmosplayWindowAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayWindowAdViewController.m; sourceTree = "<group>"; };
-		5B994AC62439E48400ABF21F /* AtmosplayFloatAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtmosplayFloatAdViewController.h; sourceTree = "<group>"; };
-		5B994AC72439E48400ABF21F /* AtmosplayFloatAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayFloatAdViewController.m; sourceTree = "<group>"; };
+		5B61AEFD248745DB0040A599 /* PAStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAStatisticsViewController.m; sourceTree = "<group>"; };
+		5B61AEFE248745DB0040A599 /* PAStatisticsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAStatisticsCell.xib; sourceTree = "<group>"; };
+		5B61AEFF248745DB0040A599 /* PAStatisticsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAStatisticsCell.m; sourceTree = "<group>"; };
+		5B61AF00248745DB0040A599 /* PAStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAStatisticsViewController.h; sourceTree = "<group>"; };
+		5B61AF01248745DB0040A599 /* PAStatisticsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAStatisticsCell.h; sourceTree = "<group>"; };
+		5B61AF02248745DB0040A599 /* PAGDPRSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAGDPRSwitchCell.m; sourceTree = "<group>"; };
+		5B61AF03248745DB0040A599 /* NSException+ AtmosplayDisableUIKVCAccessProhibited.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+ AtmosplayDisableUIKVCAccessProhibited.h"; sourceTree = "<group>"; };
+		5B61AF04248745DB0040A599 /* PASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PASettingsViewController.h; sourceTree = "<group>"; };
+		5B61AF06248745DB0040A599 /* PANativeExpressAdCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANativeExpressAdCell.h; sourceTree = "<group>"; };
+		5B61AF07248745DB0040A599 /* PANativeExpressAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANativeExpressAdViewController.h; sourceTree = "<group>"; };
+		5B61AF08248745DB0040A599 /* PAShowNativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAShowNativeAdViewController.m; sourceTree = "<group>"; };
+		5B61AF09248745DB0040A599 /* PANativeAdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANativeAdTableViewCell.h; sourceTree = "<group>"; };
+		5B61AF0A248745DB0040A599 /* PANativeExpressAdCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANativeExpressAdCell.m; sourceTree = "<group>"; };
+		5B61AF0B248745DB0040A599 /* PANativeExpressAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PANativeExpressAdCell.xib; sourceTree = "<group>"; };
+		5B61AF0C248745DB0040A599 /* PAShowNativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAShowNativeAdViewController.h; sourceTree = "<group>"; };
+		5B61AF0D248745DB0040A599 /* PANativeExpressAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANativeExpressAdViewController.m; sourceTree = "<group>"; };
+		5B61AF0E248745DB0040A599 /* PANativeAdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANativeAdTableViewCell.m; sourceTree = "<group>"; };
+		5B61AF0F248745DB0040A599 /* PANativeAdTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PANativeAdTableViewCell.xib; sourceTree = "<group>"; };
+		5B61AF10248745DB0040A599 /* PAAdAutoModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAdAutoModelCell.m; sourceTree = "<group>"; };
+		5B61AF11248745DB0040A599 /* PAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAMenuViewController.m; sourceTree = "<group>"; };
+		5B61AF13248745DB0040A599 /* AtmosplayFloatAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtmosplayFloatAdViewController.h; sourceTree = "<group>"; };
+		5B61AF14248745DB0040A599 /* AtmosplayFloatAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayFloatAdViewController.m; sourceTree = "<group>"; };
+		5B61AF15248745DB0040A599 /* PAChannelIDCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAChannelIDCell.h; sourceTree = "<group>"; };
+		5B61AF16248745DB0040A599 /* PATestModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PATestModelCell.m; sourceTree = "<group>"; };
+		5B61AF17248745DB0040A599 /* PARootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PARootViewController.h; sourceTree = "<group>"; };
+		5B61AF18248745DB0040A599 /* PAPlayableAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPlayableAdsViewController.m; sourceTree = "<group>"; };
+		5B61AF1A248745DB0040A599 /* AtmosplayWindowAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtmosplayWindowAdViewController.h; sourceTree = "<group>"; };
+		5B61AF1B248745DB0040A599 /* AtmosplayWindowAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayWindowAdViewController.m; sourceTree = "<group>"; };
+		5B61AF1C248745DB0040A599 /* PADemoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADemoUtils.h; sourceTree = "<group>"; };
+		5B61AF1D248745DB0040A599 /* PASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PASettingsViewController.m; sourceTree = "<group>"; };
+		5B61AF1E248745DB0040A599 /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+ AtmosplayDisableUIKVCAccessProhibited.m"; sourceTree = "<group>"; };
+		5B61AF1F248745DB0040A599 /* PAGDPRSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAGDPRSwitchCell.h; sourceTree = "<group>"; };
+		5B61AF20248745DB0040A599 /* PAAdAutoModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAdAutoModelCell.h; sourceTree = "<group>"; };
+		5B61AF21248745DB0040A599 /* PAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAMenuViewController.h; sourceTree = "<group>"; };
+		5B61AF22248745DB0040A599 /* PARootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PARootViewController.m; sourceTree = "<group>"; };
+		5B61AF23248745DB0040A599 /* PATestModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PATestModelCell.h; sourceTree = "<group>"; };
+		5B61AF24248745DB0040A599 /* PAChannelIDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAChannelIDCell.m; sourceTree = "<group>"; };
+		5B61AF25248745DB0040A599 /* PADemoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADemoUtils.m; sourceTree = "<group>"; };
+		5B61AF27248745DB0040A599 /* AtmosplayBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtmosplayBannerViewController.h; sourceTree = "<group>"; };
+		5B61AF28248745DB0040A599 /* AtmosplayBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtmosplayBannerViewController.m; sourceTree = "<group>"; };
+		5B61AF29248745DB0040A599 /* PAPlayableAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPlayableAdsViewController.h; sourceTree = "<group>"; };
 		5B994ACB243A13DC00ABF21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70511BFC20E9C25FCA44C77C /* Pods-PlayableAdsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdsDemo/Pods-PlayableAdsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C758B4D71FAFFBC8009CE8E9 /* PlayableAdsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayableAdsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,84 +130,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B9686E1236C09A300A47ADE /* Demo */ = {
+		5B61AEFB248745DB0040A599 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				5B994AC52439E48400ABF21F /* FloatAd */,
-				5B994AC22439E48400ABF21F /* WindowAd */,
-				5B9686EB236C09A300A47ADE /* Native */,
-				5B9686E2236C09A300A47ADE /* Statistics */,
-				5B9686E9236C09A300A47ADE /* NSException+ AtmosplayDisableUIKVCAccessProhibited.h */,
-				5B9686FF236C09A300A47ADE /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m */,
-				5B9686EA236C09A300A47ADE /* PASettingsViewController.h */,
-				5B9686FE236C09A300A47ADE /* PASettingsViewController.m */,
-				5B968700236C09A300A47ADE /* PAGDPRSwitchCell.h */,
-				5B9686E8236C09A300A47ADE /* PAGDPRSwitchCell.m */,
-				5B9686F8236C09A300A47ADE /* PAChannelIDCell.h */,
-				5B968705236C09A300A47ADE /* PAChannelIDCell.m */,
-				5B968704236C09A300A47ADE /* PATestModelCell.h */,
-				5B9686F9236C09A300A47ADE /* PATestModelCell.m */,
-				5B968701236C09A300A47ADE /* PAAdAutoModelCell.h */,
-				5B9686F6236C09A300A47ADE /* PAAdAutoModelCell.m */,
-				5B968702236C09A300A47ADE /* PAMenuViewController.h */,
-				5B9686F7236C09A300A47ADE /* PAMenuViewController.m */,
-				5B9686FA236C09A300A47ADE /* PARootViewController.h */,
-				5B968703236C09A300A47ADE /* PARootViewController.m */,
-				5B968706236C09A300A47ADE /* AtmosplayAdsBannerViewController.h */,
-				5B9686FD236C09A300A47ADE /* AtmosplayAdsBannerViewController.m */,
-				5B9686FC236C09A300A47ADE /* PADemoUtils.h */,
-				5B968707236C09A300A47ADE /* PADemoUtils.m */,
-				5B968708236C09A300A47ADE /* PAPlayableAdsViewController.h */,
-				5B9686FB236C09A300A47ADE /* PAPlayableAdsViewController.m */,
+				5B61AF26248745DB0040A599 /* Banner */,
+				5B61AF19248745DB0040A599 /* WindowAd */,
+				5B61AF12248745DB0040A599 /* FloatAd */,
+				5B61AF05248745DB0040A599 /* Native */,
+				5B61AEFC248745DB0040A599 /* Statistics */,
+				5B61AF1F248745DB0040A599 /* PAGDPRSwitchCell.h */,
+				5B61AF02248745DB0040A599 /* PAGDPRSwitchCell.m */,
+				5B61AF03248745DB0040A599 /* NSException+ AtmosplayDisableUIKVCAccessProhibited.h */,
+				5B61AF1E248745DB0040A599 /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m */,
+				5B61AF04248745DB0040A599 /* PASettingsViewController.h */,
+				5B61AF1D248745DB0040A599 /* PASettingsViewController.m */,
+				5B61AF20248745DB0040A599 /* PAAdAutoModelCell.h */,
+				5B61AF10248745DB0040A599 /* PAAdAutoModelCell.m */,
+				5B61AF21248745DB0040A599 /* PAMenuViewController.h */,
+				5B61AF11248745DB0040A599 /* PAMenuViewController.m */,
+				5B61AF15248745DB0040A599 /* PAChannelIDCell.h */,
+				5B61AF24248745DB0040A599 /* PAChannelIDCell.m */,
+				5B61AF23248745DB0040A599 /* PATestModelCell.h */,
+				5B61AF16248745DB0040A599 /* PATestModelCell.m */,
+				5B61AF17248745DB0040A599 /* PARootViewController.h */,
+				5B61AF22248745DB0040A599 /* PARootViewController.m */,
+				5B61AF1C248745DB0040A599 /* PADemoUtils.h */,
+				5B61AF25248745DB0040A599 /* PADemoUtils.m */,
+				5B61AF29248745DB0040A599 /* PAPlayableAdsViewController.h */,
+				5B61AF18248745DB0040A599 /* PAPlayableAdsViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		5B9686E2236C09A300A47ADE /* Statistics */ = {
+		5B61AEFC248745DB0040A599 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				5B9686E3236C09A300A47ADE /* PAStatisticsViewController.m */,
-				5B9686E4236C09A300A47ADE /* PAStatisticsCell.xib */,
-				5B9686E5236C09A300A47ADE /* PAStatisticsCell.m */,
-				5B9686E6236C09A300A47ADE /* PAStatisticsViewController.h */,
-				5B9686E7236C09A300A47ADE /* PAStatisticsCell.h */,
+				5B61AF00248745DB0040A599 /* PAStatisticsViewController.h */,
+				5B61AEFD248745DB0040A599 /* PAStatisticsViewController.m */,
+				5B61AEFE248745DB0040A599 /* PAStatisticsCell.xib */,
+				5B61AF01248745DB0040A599 /* PAStatisticsCell.h */,
+				5B61AEFF248745DB0040A599 /* PAStatisticsCell.m */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
 		};
-		5B9686EB236C09A300A47ADE /* Native */ = {
+		5B61AF05248745DB0040A599 /* Native */ = {
 			isa = PBXGroup;
 			children = (
-				5B9686EC236C09A300A47ADE /* PANativeExpressAdCell.h */,
-				5B9686F0236C09A300A47ADE /* PANativeExpressAdCell.m */,
-				5B9686ED236C09A300A47ADE /* PANativeExpressAdViewController.h */,
-				5B9686F3236C09A300A47ADE /* PANativeExpressAdViewController.m */,
-				5B9686EE236C09A300A47ADE /* PAShowNativeAdViewController.m */,
-				5B9686F2236C09A300A47ADE /* PAShowNativeAdViewController.h */,
-				5B9686EF236C09A300A47ADE /* PANativeAdTableViewCell.h */,
-				5B9686F4236C09A300A47ADE /* PANativeAdTableViewCell.m */,
-				5B9686F5236C09A300A47ADE /* PANativeAdTableViewCell.xib */,
-				5B9686F1236C09A300A47ADE /* PANativeExpressAdCell.xib */,
+				5B61AF06248745DB0040A599 /* PANativeExpressAdCell.h */,
+				5B61AF07248745DB0040A599 /* PANativeExpressAdViewController.h */,
+				5B61AF08248745DB0040A599 /* PAShowNativeAdViewController.m */,
+				5B61AF09248745DB0040A599 /* PANativeAdTableViewCell.h */,
+				5B61AF0A248745DB0040A599 /* PANativeExpressAdCell.m */,
+				5B61AF0B248745DB0040A599 /* PANativeExpressAdCell.xib */,
+				5B61AF0C248745DB0040A599 /* PAShowNativeAdViewController.h */,
+				5B61AF0D248745DB0040A599 /* PANativeExpressAdViewController.m */,
+				5B61AF0E248745DB0040A599 /* PANativeAdTableViewCell.m */,
+				5B61AF0F248745DB0040A599 /* PANativeAdTableViewCell.xib */,
 			);
 			path = Native;
 			sourceTree = "<group>";
 		};
-		5B994AC22439E48400ABF21F /* WindowAd */ = {
+		5B61AF12248745DB0040A599 /* FloatAd */ = {
 			isa = PBXGroup;
 			children = (
-				5B994AC32439E48400ABF21F /* AtmosplayWindowAdViewController.h */,
-				5B994AC42439E48400ABF21F /* AtmosplayWindowAdViewController.m */,
+				5B61AF13248745DB0040A599 /* AtmosplayFloatAdViewController.h */,
+				5B61AF14248745DB0040A599 /* AtmosplayFloatAdViewController.m */,
+			);
+			path = FloatAd;
+			sourceTree = "<group>";
+		};
+		5B61AF19248745DB0040A599 /* WindowAd */ = {
+			isa = PBXGroup;
+			children = (
+				5B61AF1A248745DB0040A599 /* AtmosplayWindowAdViewController.h */,
+				5B61AF1B248745DB0040A599 /* AtmosplayWindowAdViewController.m */,
 			);
 			path = WindowAd;
 			sourceTree = "<group>";
 		};
-		5B994AC52439E48400ABF21F /* FloatAd */ = {
+		5B61AF26248745DB0040A599 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
-				5B994AC62439E48400ABF21F /* AtmosplayFloatAdViewController.h */,
-				5B994AC72439E48400ABF21F /* AtmosplayFloatAdViewController.m */,
+				5B61AF27248745DB0040A599 /* AtmosplayBannerViewController.h */,
+				5B61AF28248745DB0040A599 /* AtmosplayBannerViewController.m */,
 			);
-			path = FloatAd;
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		C758B4CE1FAFFBC8009CE8E9 = {
@@ -233,8 +241,8 @@
 		C758B4D91FAFFBC8009CE8E9 /* PlayableAdsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5B61AEFB248745DB0040A599 /* Demo */,
 				5B994ACA243A13DC00ABF21F /* Main.storyboard */,
-				5B9686E1236C09A300A47ADE /* Demo */,
 				C758B4DA1FAFFBC8009CE8E9 /* AppDelegate.h */,
 				C758B4DB1FAFFBC8009CE8E9 /* AppDelegate.m */,
 				C758B4E31FAFFBC8009CE8E9 /* Assets.xcassets */,
@@ -360,12 +368,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B968712236C09A300A47ADE /* PANativeAdTableViewCell.xib in Resources */,
+				5B61AF33248745DB0040A599 /* PANativeAdTableViewCell.xib in Resources */,
 				C758B4E71FAFFBC8009CE8E9 /* LaunchScreen.storyboard in Resources */,
-				5B96870A236C09A300A47ADE /* PAStatisticsCell.xib in Resources */,
+				5B61AF2B248745DB0040A599 /* PAStatisticsCell.xib in Resources */,
 				5B994ACC243A13DC00ABF21F /* Main.storyboard in Resources */,
+				5B61AF30248745DB0040A599 /* PANativeExpressAdCell.xib in Resources */,
 				C758B4E41FAFFBC8009CE8E9 /* Assets.xcassets in Resources */,
-				5B96870F236C09A300A47ADE /* PANativeExpressAdCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +413,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PlayableAdsDemo/Pods-PlayableAdsDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReaderViewController/QRCodeReaderViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReaderViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -458,27 +468,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B96870D236C09A300A47ADE /* PAShowNativeAdViewController.m in Sources */,
-				5B96871A236C09A400A47ADE /* PARootViewController.m in Sources */,
-				5B968716236C09A300A47ADE /* PAPlayableAdsViewController.m in Sources */,
-				5B96871B236C09A400A47ADE /* PAChannelIDCell.m in Sources */,
-				5B968709236C09A300A47ADE /* PAStatisticsViewController.m in Sources */,
-				5B96870B236C09A300A47ADE /* PAStatisticsCell.m in Sources */,
-				5B968717236C09A300A47ADE /* AtmosplayAdsBannerViewController.m in Sources */,
-				5B968714236C09A300A47ADE /* PAMenuViewController.m in Sources */,
-				5B994AC92439E48400ABF21F /* AtmosplayFloatAdViewController.m in Sources */,
-				5B968719236C09A400A47ADE /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m in Sources */,
+				5B61AF2E248745DB0040A599 /* PAShowNativeAdViewController.m in Sources */,
+				5B61AF3C248745DB0040A599 /* PARootViewController.m in Sources */,
+				5B61AF3D248745DB0040A599 /* PAChannelIDCell.m in Sources */,
+				5B61AF3E248745DB0040A599 /* PADemoUtils.m in Sources */,
+				5B61AF3B248745DB0040A599 /* NSException+ AtmosplayDisableUIKVCAccessProhibited.m in Sources */,
+				5B61AF2A248745DB0040A599 /* PAStatisticsViewController.m in Sources */,
+				5B61AF36248745DB0040A599 /* AtmosplayFloatAdViewController.m in Sources */,
+				5B61AF2C248745DB0040A599 /* PAStatisticsCell.m in Sources */,
+				5B61AF35248745DB0040A599 /* PAMenuViewController.m in Sources */,
 				C758B4EA1FAFFBC8009CE8E9 /* main.m in Sources */,
-				5B968711236C09A300A47ADE /* PANativeAdTableViewCell.m in Sources */,
-				5B96870C236C09A300A47ADE /* PAGDPRSwitchCell.m in Sources */,
-				5B968713236C09A300A47ADE /* PAAdAutoModelCell.m in Sources */,
+				5B61AF3A248745DB0040A599 /* PASettingsViewController.m in Sources */,
+				5B61AF32248745DB0040A599 /* PANativeAdTableViewCell.m in Sources */,
+				5B61AF2D248745DB0040A599 /* PAGDPRSwitchCell.m in Sources */,
+				5B61AF37248745DB0040A599 /* PATestModelCell.m in Sources */,
+				5B61AF34248745DB0040A599 /* PAAdAutoModelCell.m in Sources */,
+				5B61AF38248745DB0040A599 /* PAPlayableAdsViewController.m in Sources */,
 				C758B4DC1FAFFBC8009CE8E9 /* AppDelegate.m in Sources */,
-				5B994AC82439E48400ABF21F /* AtmosplayWindowAdViewController.m in Sources */,
-				5B96871C236C09A400A47ADE /* PADemoUtils.m in Sources */,
-				5B968710236C09A300A47ADE /* PANativeExpressAdViewController.m in Sources */,
-				5B968715236C09A300A47ADE /* PATestModelCell.m in Sources */,
-				5B96870E236C09A300A47ADE /* PANativeExpressAdCell.m in Sources */,
-				5B968718236C09A300A47ADE /* PASettingsViewController.m in Sources */,
+				5B61AF31248745DB0040A599 /* PANativeExpressAdViewController.m in Sources */,
+				5B61AF3F248745DB0040A599 /* AtmosplayBannerViewController.m in Sources */,
+				5B61AF2F248745DB0040A599 /* PANativeExpressAdCell.m in Sources */,
+				5B61AF39248745DB0040A599 /* AtmosplayWindowAdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,8 +32,8 @@
     NSArray *codes = [statisticsData valueForKey:@"errorCode"];
 
     self.trackNameLab.text = trackingName;
-    self.successLab.text = [NSString stringWithFormat:@"success times is %ld", count];
-    self.failLab.text = [NSString stringWithFormat:@"fail times is %ld", errorCount];
+    self.successLab.text = [NSString stringWithFormat:@"success times is %lu", (unsigned long)count];
+    self.failLab.text = [NSString stringWithFormat:@"fail times is %lu", (unsigned long)errorCount];
     self.failReasonLab.text = [NSString stringWithFormat:@"error reason: %@", [codes componentsJoinedByString:@"、"]];
 }
 

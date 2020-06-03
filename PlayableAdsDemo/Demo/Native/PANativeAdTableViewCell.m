@@ -59,18 +59,17 @@
         } else {
             [weakSelf.coverImgView addSubview:nativeAd.mediaView];
             nativeAd.mediaView.translatesAutoresizingMaskIntoConstraints = NO;
-            
+
             CGFloat coverImgHeight = weakSelf.coverImgView.bounds.size.height;
             CGFloat coverImgWidth = weakSelf.coverImgView.bounds.size.width;
-            
+
             [nativeAd.mediaView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.center.equalTo(weakSelf.coverImgView);
                 make.height.mas_equalTo(coverImgHeight);
                 make.width.mas_equalTo(coverImgWidth);
             }];
-            
         }
-        
+
         [weakSelf.freeView addSubview:nativeAd.callToAction];
 
     });

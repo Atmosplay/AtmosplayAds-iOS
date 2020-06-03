@@ -31,6 +31,7 @@ typedef enum : NSUInteger {
 - (BOOL)removeTagFile;
 - (BOOL)tagFileExsit;
 - (NSURL *)baseDirectoryURL;
+- (NSURL *)windowAdBaseDirectoryURL;
 - (NSString *)removeSpaceAndNewline:(NSString *)str;
 // auto load ad
 - (void)setAutoLoadAd:(BOOL)isAuto;
