@@ -1,4 +1,4 @@
-[See the English Guide](https://github.com/Atmosplay/AtmosplayAds-iOS/wiki)
+
    * [入门指南](#入门指南)
    * [前提条件](#前提条件)
    * [导入移动广告 SDK](#导入移动广告-sdk)
@@ -40,8 +40,7 @@
       * [窗口广告](#窗口广告)
          * [初始化及请求](#初始化及请求-1)
          * [展示窗口广告](#展示窗口广告)
-         * [更新窗口广告位置](#更新窗口广告位置)
-         * [其他方法](#其他方法-1)
+         * [关闭窗口广告](#关闭窗口广告)
          * [实现窗口广告代理方法](#实现窗口广告代理方法)
       * [Tools and Debugging](#tools-and-debugging)
          * [GDPR](#gdpr)
@@ -558,11 +557,7 @@ self.windowAd.delegate = self;
 
 ### 展示窗口广告
 此方法将窗口广告添加到用户屏幕上。
-
-注意：
-1. 初始化后的第一次展示请调用此方法 
-2. 如需更新位置，请调用 `resetWindowAdFrameWith:width:rootViewController:`
-3. 如隐藏后再次展示，请调用 `showAgainAfterHiding`
+展示后会自动请求下一条窗口广告。
 
 ```objective-c
 // 展示窗口广告，请先设置窗口广告展示的位置坐标和窗口的宽
@@ -583,33 +578,10 @@ if (self.windowAd.isReady) {
 }
 ```
 
-### 更新窗口广告位置
-```objective-c
-// 重设窗口广告位置
-// point：窗口广告原点坐标
-// width：窗口广告宽度。高度由对应比例计算，无需设置。
-// transformAngle： 窗口广告倾斜角度
-// rootViewController：展示窗口广告的控制器
-float x = 20.0;
-float y = 100.0;
-float angel = 5;
-float width = 150;
-[self.windowAd resetWindowAdFrameWith:CGPointMake(x, y) width:width transfromAngle:angel rootViewController:self];
-```
-
-### 其他方法
+### 关闭窗口广告
+将窗口广告移除，如需再次显示，可再次调用show方法。
 ```objective
-// 暂停窗口广告
-- (void)pauseVideo;
-// 恢复播放
-- (void)resumeVideo;
-// 隐藏窗口广告
-- (void)hiddenWindowAd;
-// 隐藏后再次展示窗口广告
-// 此方法仅适用于隐藏后的再次展示 
-- (void)showAgainAfterHiding;
-// 销毁窗口广告
-- (void)destroyWindowAd;
+[self.windowAd closeWindowAd];
 
 ```
 
