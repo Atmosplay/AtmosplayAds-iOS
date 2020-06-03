@@ -21,11 +21,8 @@
 @property (nonatomic) UIButton *requestButton;
 @property (nonatomic) UIButton *showButton;
 @property (nonatomic) UIButton *destroyButton;
-@property (nonatomic) UIButton *hiddenWindowAdButton;
-@property (nonatomic) UIButton *showAgainAfterHidingButton;
 @property (nonatomic) UIButton *dismissVcButton;
 @property (nonatomic) UITextView *console;
-@property (nonatomic) UIButton *resetFrameButton;
 
 @property (nonatomic) AtmosplayWindowAd *windowAd;
 @end
@@ -117,27 +114,11 @@
 
     self.destroyButton = [[UIButton alloc] init];
     self.destroyButton.backgroundColor = [UIColor blackColor];
-    [self.destroyButton setTitle:@"Destroy" forState:UIControlStateNormal];
+    [self.destroyButton setTitle:@"Close" forState:UIControlStateNormal];
     [self.destroyButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
     self.destroyButton.layer.cornerRadius = 5;
     self.destroyButton.layer.masksToBounds = YES;
-    [self.destroyButton addTarget:self action:@selector(destroyWindowAd) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.hiddenWindowAdButton = [[UIButton alloc] init];
-    self.hiddenWindowAdButton.backgroundColor = [UIColor blackColor];
-    [self.hiddenWindowAdButton setTitle:@"Hidden" forState:UIControlStateNormal];
-    [self.hiddenWindowAdButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    self.hiddenWindowAdButton.layer.cornerRadius = 5;
-    self.hiddenWindowAdButton.layer.masksToBounds = YES;
-    [self.hiddenWindowAdButton addTarget:self action:@selector(hiddenWindowAd) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.showAgainAfterHidingButton = [[UIButton alloc] init];
-    self.showAgainAfterHidingButton.backgroundColor = [UIColor blackColor];
-    [self.showAgainAfterHidingButton setTitle:@"ShowAgain" forState:UIControlStateNormal];
-    [self.showAgainAfterHidingButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    self.showAgainAfterHidingButton.layer.cornerRadius = 5;
-    self.showAgainAfterHidingButton.layer.masksToBounds = YES;
-    [self.showAgainAfterHidingButton addTarget:self action:@selector(showAgainAfterHiding) forControlEvents:UIControlEventTouchUpInside];
+    [self.destroyButton addTarget:self action:@selector(closeWindowAd) forControlEvents:UIControlEventTouchUpInside];
     
     self.dismissVcButton = [[UIButton alloc] init];
     self.dismissVcButton.backgroundColor = [UIColor blackColor];
@@ -146,14 +127,6 @@
     self.dismissVcButton.layer.cornerRadius = 5;
     self.dismissVcButton.layer.masksToBounds = YES;
     [self.dismissVcButton addTarget:self action:@selector(dismissVC) forControlEvents:UIControlEventTouchUpInside];
-
-    self.resetFrameButton = [[UIButton alloc] init];
-    self.resetFrameButton.backgroundColor = [UIColor blackColor];
-    [self.resetFrameButton setTitle:@"ResetFrame" forState:UIControlStateNormal];
-    [self.resetFrameButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    self.resetFrameButton.layer.cornerRadius = 5;
-    self.resetFrameButton.layer.masksToBounds = YES;
-    [self.resetFrameButton addTarget:self action:@selector(resetWindowAdFrame) forControlEvents:UIControlEventTouchUpInside];
 
     self.console = [[UITextView alloc] init];
     self.console.backgroundColor = [UIColor grayColor];
@@ -168,9 +141,6 @@
     [self.view addSubview:self.showButton];
     [self.view addSubview:self.destroyButton];
     [self.view addSubview:self.dismissVcButton];
-    [self.view addSubview:self.hiddenWindowAdButton];
-    [self.view addSubview:self.showAgainAfterHidingButton];
-    [self.view addSubview:self.resetFrameButton];
     [self.view addSubview:self.console];
     
     [self.appID mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -229,43 +199,22 @@
         make.right.equalTo(self.adUnitID.mas_right);
     }];
     
-    [self.hiddenWindowAdButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.requestButton.mas_bottom).with.offset(margin);
-        make.width.equalTo(self.requestButton.mas_width);
-        make.height.equalTo(self.destroyButton.mas_height);
-        make.left.equalTo(self.requestButton.mas_left);
-    }];
-    
-    [self.showAgainAfterHidingButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.destroyButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.requestButton.mas_bottom).with.offset(margin);
         make.width.equalTo(self.requestButton.mas_width);
         make.height.equalTo(self.requestButton.mas_height);
-        make.right.equalTo(self.showButton.mas_right);
-    }];
-    
-    [self.destroyButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.hiddenWindowAdButton.mas_bottom).with.offset(margin);
-        make.width.equalTo(self.hiddenWindowAdButton.mas_width);
-        make.height.equalTo(self.hiddenWindowAdButton.mas_height);
-        make.left.equalTo(self.hiddenWindowAdButton.mas_left);
+        make.left.equalTo(self.showButton.mas_left);
     }];
     
     [self.dismissVcButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.hiddenWindowAdButton.mas_bottom).with.offset(margin);
-        make.width.equalTo(self.hiddenWindowAdButton.mas_width);
-        make.height.equalTo(self.hiddenWindowAdButton.mas_height);
-        make.right.equalTo(self.showAgainAfterHidingButton.mas_right);
-    }];
-    
-    [self.resetFrameButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.dismissVcButton.mas_bottom).with.offset(margin);
-        make.width.equalTo(self.appID.mas_width);
-        make.height.equalTo(self.hiddenWindowAdButton.mas_height);
-        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.requestButton.mas_bottom).with.offset(margin);
+        make.width.equalTo(self.requestButton.mas_width);
+        make.height.equalTo(self.requestButton.mas_height);
+        make.left.equalTo(self.requestButton.mas_left);
     }];
 
     [self.console mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.resetFrameButton.mas_bottom).with.offset(margin);
+        make.top.equalTo(self.dismissVcButton.mas_bottom).with.offset(margin);
         make.width.equalTo(self.view.mas_width);
         make.bottom.equalTo(self.view.mas_bottom);
         make.centerX.equalTo(self.view.mas_centerX);
@@ -301,7 +250,7 @@
         self.adUnitID.text = @"667C3FA5-0151-20A9-31E3-E452B5D501B3";
     }
     if (self.windowAd) {
-        [self destroyWindowAd];
+        [self closeWindowAd];
     }
     self.windowAd = [[AtmosplayWindowAd alloc]
                     initAndLoadAdWithAppID:self.appID.text
@@ -328,50 +277,22 @@
     float width = [self.widthTextField.text floatValue];
     
     if (self.windowAd.isReady) {
+        [self addLog:@"isReady = Yes"];
         [self.windowAd showWindowAdWith:CGPointMake(x, y)
                                   width:width
                          transformAngle:angel
                      rootViewController:self];
+    } else {
+        [self addLog:@"isReady = No"];
     }
 }
 
-- (void)destroyWindowAd {
-    [self.windowAd destroyWindowAd];
-    self.windowAd.delegate = nil;
-    self.windowAd = nil;
-}
-
-- (void)hiddenWindowAd {
-    [self.windowAd hiddenWindowAd];
-}
-
-- (void)showAgainAfterHiding {
-    [self.windowAd showAgainAfterHiding];
+- (void)closeWindowAd {
+    [self.windowAd closeWindowAd];
 }
 
 - (void)dismissVC {
     [self dismissViewControllerAnimated:NO completion:nil];
-}
-
-- (void)resetWindowAdFrame {
-    if (!self.xTextField.text.length) {
-        self.xTextField.text = @"20";
-    }
-    if (!self.yTextField.text.length) {
-        self.yTextField.text = @"100";
-    }
-    if (!self.angleTextField.text.length) {
-        self.angleTextField.text = @"5";
-    }
-    if (!self.widthTextField.text.length) {
-        self.widthTextField.text = @"150";
-    }
-    float x = [self.xTextField.text floatValue];
-    float y = [self.yTextField.text floatValue];
-    float angel = [self.angleTextField.text floatValue];
-    float width = [self.widthTextField.text floatValue];
-    
-    [self.windowAd resetWindowAdFrameWith:CGPointMake(x, y) width:width transfromAngle:angel rootViewController:self];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -404,7 +325,6 @@
 }
 - (void)atmosplayWindowAdDidFailToPlay:(AtmosplayWindowAd *)windowAd {
     [self addLog:@"atmosplayWindowAdDidFailToPlay"];
-    [self requestWindowAd];
 }
 /// Tells the delegate that the ad did animate off the screen.
 - (void)atmosplayWindowAdDidDismissScreen:(AtmosplayWindowAd *)windowAd {

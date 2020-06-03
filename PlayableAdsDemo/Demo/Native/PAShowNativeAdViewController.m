@@ -22,6 +22,7 @@ static NSString *cellID = @"PANativeAdCellID";
 
 @property (nonatomic) NSMutableArray *dataLists; // 偶数是广告
 @property (nonatomic) AtmosplayNative *nativeAd;
+
 @end
 
 @implementation PAShowNativeAdViewController
@@ -37,6 +38,28 @@ static NSString *cellID = @"PANativeAdCellID";
 
     [self.nativeAdTableView registerNib:[UINib nibWithNibName:@"PANativeAdTableViewCell" bundle:nil]
                  forCellReuseIdentifier:cellID];
+
+    [self setVauleToTextField];
+}
+- (void)setVauleToTextField {
+
+    PAAdConfigInfo *adConfig = [[PADemoUtils shared] getAdInfo:kAtmosplayAdsType_native];
+    if (!adConfig) {
+        [self saveValueToConfig];
+        return;
+    }
+
+    self.appIdTextField.text = adConfig.appId;
+    self.adUnitTextField.text = adConfig.placementId;
+}
+
+- (void)saveValueToConfig {
+    PAAdConfigInfo *adConfig = [[PAAdConfigInfo alloc] init];
+    adConfig.adType = kAtmosplayAdsType_native;
+    adConfig.appId = self.appIdTextField.text;
+    adConfig.placementId = self.adUnitTextField.text;
+
+    [[PADemoUtils shared] saveAdInfo:adConfig];
 }
 - (void)addLog:(NSString *)newLog {
     __weak typeof(self) weakSelf = self;
@@ -71,13 +94,16 @@ static NSString *cellID = @"PANativeAdCellID";
         self.nativeAd = nil;
         return;
     }
-    
+
+    [self saveValueToConfig];
+
     NSString *requestText = @"request playable ad ";
     if ([[PADemoUtils shared] channelID].length != 0) {
-        requestText = [NSString stringWithFormat:@"%@ and channelID is %@",requestText,[[PADemoUtils shared] channelID]];
+        requestText =
+            [NSString stringWithFormat:@"%@ and channelID is %@", requestText, [[PADemoUtils shared] channelID]];
     }
     [self addLog:requestText];
-    
+
     self.nativeAd = [[AtmosplayNative alloc] initWithAppID:appId adUnitID:appUnit ];
     self.nativeAd.channelId = [[PADemoUtils shared] channelID];
     self.nativeAd.delegate = self;
@@ -177,6 +203,7 @@ static NSString *cellID = @"PANativeAdCellID";
 }
 
 #pragma mark : PANativeAdDelegate
+
 /// Tells the delegate that an ad has been successfully loaded.
 - (void)atmosplayNativeAdDidLoad:(AtmosplayNativeAdModel *)nativeAd {
     __weak typeof(self) weakSelf = self;

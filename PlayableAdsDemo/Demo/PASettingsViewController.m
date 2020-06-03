@@ -20,13 +20,22 @@
 }
 
 - (IBAction)clearCacheAction:(UIBarButtonItem *)sender {
+    NSError *error;
+    // clear playable cache
     NSURL *directoryURL = [[PADemoUtils shared] baseDirectoryURL];
     if ([[NSFileManager defaultManager] fileExistsAtPath:directoryURL.path]) {
-        NSError *error;
+        
         [[NSFileManager defaultManager] removeItemAtPath:directoryURL.path error:&error];
-        if (!error) {
-            exit(0);
-        }
+    }
+    // clear window ad cache
+    NSURL *windowAdDirectoryURL = [[PADemoUtils shared] windowAdBaseDirectoryURL];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:windowAdDirectoryURL.path]) {
+        NSError *error;
+        [[NSFileManager defaultManager] removeItemAtPath:windowAdDirectoryURL.path error:&error];
+    }
+    
+    if (!error) {
+        exit(0);
     }
 }
 

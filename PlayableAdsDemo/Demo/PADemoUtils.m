@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #define SYSTEM_VERSION_LESS_THAN(v)                                                                                    \
-    ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
 @implementation PAAdConfigInfo
 
@@ -58,6 +58,21 @@
     }
 
     return [cacheDirectoryURL URLByAppendingPathComponent:@"PlayableAdsCache" isDirectory:YES];
+}
+
+- (NSURL *)windowAdBaseDirectoryURL {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *cacheDirectoryURL = [fileManager URLForDirectory:NSCachesDirectory
+                                                   inDomain:NSUserDomainMask
+                                          appropriateForURL:nil
+                                                     create:NO
+                                                      error:nil];
+    // 10.0以下使用tmp的目录做缓存，因为WKWebview在10.0以下只能加载tmp的资源
+    if (SYSTEM_VERSION_LESS_THAN(@"10.0")) {
+        cacheDirectoryURL = [NSURL fileURLWithPath:NSTemporaryDirectory()];
+    }
+
+    return [cacheDirectoryURL URLByAppendingPathComponent:@"WindowAdsCache" isDirectory:YES];
 }
 
 - (BOOL)createTagFile {

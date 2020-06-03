@@ -1,16 +1,16 @@
 //
-//  AtmosplayAdsBannerViewController.m
+//  AtmosplayBannerViewController.m
 //  PlayableAds_Example
 //
 //  Created by 王泽永 on 2019/9/4.
 //  Copyright © 2019 on99. All rights reserved.
 //
 
-#import "AtmosplayAdsBannerViewController.h"
+#import "AtmosplayBannerViewController.h"
 #import <AtmosplayAds/AtmosplayBanner.h>
 #import <AtmosplayAds/PAUtils.h>
 
-@interface AtmosplayAdsBannerViewController () <AtmosplayBannerDelegate>
+@interface AtmosplayBannerViewController () <AtmosplayBannerDelegate>
 @property (nonatomic) AtmosplayBanner *bannerView;
 @property (nonatomic) UITextField *appID;
 @property (nonatomic) UITextField *adUnitID;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation AtmosplayAdsBannerViewController
+@implementation AtmosplayBannerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,10 +34,10 @@
     self.title = @"Banner";
     [self setUpUI];
     
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//    selector:@selector(orientationChanged:)
-//        name:@"UIDeviceOrientationDidChangeNotification"
-//      object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+    selector:@selector(orientationChanged:)
+        name:@"UIDeviceOrientationDidChangeNotification"
+      object:nil];
 }
 
 - (BOOL)shouldAutorotate {
@@ -77,7 +77,6 @@
         [self setUpUI];
     }
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"--- %@",NSStringFromCGRect(self.bannerView.frame));
         if (self.bannerView) {
             CGFloat y = self.view.frame.size.height - (self.bannerView.frame.size.height / 2);
             if (@available(ios 11.0, *)) {
@@ -85,7 +84,6 @@
             }
             self.bannerView.center = CGPointMake(self.view.frame.size.width / 2, y);
         }
-        NSLog(@"---end %@",NSStringFromCGRect(self.bannerView.frame));
     });
 }
 
@@ -276,31 +274,26 @@
 
 #pragma mark - banner view delegate
 /// Tells the delegate that an ad has been successfully loaded.
-- (void)atmosplayAdsBannerViewDidLoad:(AtmosplayBanner *)bannerView {
-    [self addLog:@"atmosplayAdsBannerViewDidLoad"];
-    __weak typeof(self) weakSelf = self;
+- (void)AtmosplayBannerViewDidLoad:(AtmosplayBanner *)bannerView {
+    [self addLog:@"AtmosplayBannerViewDidLoad"];
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (weakSelf.bannerView) {
-            [weakSelf.bannerView removeFromSuperview];
-        }
-        weakSelf.bannerView = bannerView;
-        CGFloat y = weakSelf.view.frame.size.height - (bannerView.frame.size.height / 2);
+        CGFloat y = self.view.frame.size.height - (bannerView.frame.size.height / 2);
         if (@available(iOS 11, *)) {
-            y -= weakSelf.view.safeAreaInsets.bottom;
+            y -= self.view.safeAreaInsets.bottom;
         }
-        bannerView.center = CGPointMake(weakSelf.view.frame.size.width / 2, y);
-        [weakSelf.view addSubview:weakSelf.bannerView];
+        bannerView.center = CGPointMake(self.view.frame.size.width / 2, y);
+        [self.view addSubview:bannerView];
     });
 }
 
 /// Tells the delegate that a request failed.
-- (void)atmosplayAdsBannerView:(AtmosplayBanner *)bannerView didFailWithError:(NSError *)error {
+- (void)AtmosplayBannerView:(AtmosplayBanner *)bannerView didFailWithError:(NSError *)error {
     [self addLog:[NSString stringWithFormat:@"didFailWithError:%@", error.localizedDescription]];
 }
 
 /// Tells the delegate that the banner view has been clicked.
-- (void)atmosplayAdsBannerViewDidClick:(AtmosplayBanner *)bannerView {
-    [self addLog:@"atmosplayAdsBannerViewDidClick"];
+- (void)AtmosplayBannerViewDidClick:(AtmosplayBanner *)bannerView {
+    [self addLog:@"AtmosplayBannerViewDidClick"];
 }
 
 #pragma mark - banner size selecte

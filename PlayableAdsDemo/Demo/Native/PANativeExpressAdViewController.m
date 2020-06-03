@@ -29,11 +29,30 @@ static NSString *expressId = @"ExpressViewCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self.nativeExpressAdTableView registerNib:[UINib nibWithNibName:@"PANativeExpressAdCell" bundle:nil]
                         forCellReuseIdentifier:expressId];
+    [self setVauleToTextField];
 }
 
+- (void)setVauleToTextField {
+    PAAdConfigInfo *adConfig = [[PADemoUtils shared] getAdInfo:kAtmosplayAdsType_nativeExpress];
+    if (!adConfig) {
+        [self saveValueToConfig];
+        return;
+    }
+
+    self.appIdTextField.text = adConfig.appId;
+    self.adUnitTextField.text = adConfig.placementId;
+}
+
+- (void)saveValueToConfig {
+    PAAdConfigInfo *adConfig = [[PAAdConfigInfo alloc] init];
+    adConfig.adType = kAtmosplayAdsType_nativeExpress;
+    adConfig.appId = self.appIdTextField.text;
+    adConfig.placementId = self.adUnitTextField.text;
+
+    [[PADemoUtils shared] saveAdInfo:adConfig];
+}
 - (void)addLog:(NSString *)newLog {
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -68,12 +87,15 @@ static NSString *expressId = @"ExpressViewCellID";
         return;
     }
 
+    [self saveValueToConfig];
+
     NSString *requestText = @"request playable ad ";
     if ([[PADemoUtils shared] channelID].length != 0) {
-        requestText = [NSString stringWithFormat:@"%@ and channelID is %@",requestText,[[PADemoUtils shared] channelID]];
+        requestText =
+            [NSString stringWithFormat:@"%@ and channelID is %@", requestText, [[PADemoUtils shared] channelID]];
     }
     [self addLog:requestText];
-    
+
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     self.nativeExpressAd =
         [[AtmosplayNativeExpressAd alloc] initWithAppID:appId adUnitID:appUnit adSize:CGSizeMake(width, 300)];
@@ -140,7 +162,6 @@ static NSString *expressId = @"ExpressViewCellID";
 - (void)atmosplayNativeExpressAdDidClick:(PANativeExpressAdView *)nativeExpressAd {
     [self addLog:@"native ad load click"];
 }
-
 #pragma mark : UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
