@@ -608,7 +608,6 @@ if (self.windowAd.isReady) {
 /// Tells the delegate that the ad is fail to play.
 - (void)atmosplayWindowAdDidFailToPlay:(AtmosplayWindowAd *)windowAd {
     [self addLog:@"atmosplayWindowAdDidFailToPlay"];
-    [self requestWindowAd];
 }
 /// Tells the delegate that the ad did animate off the screen.
 - (void)atmosplayWindowAdDidDismissScreen:(AtmosplayWindowAd *)windowAd {
