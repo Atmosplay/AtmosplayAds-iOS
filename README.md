@@ -560,7 +560,7 @@ self.windowAd.delegate = self;
 展示后会自动请求下一条窗口广告。
 
 ```objective-c
-// 展示窗口广告，请先设置窗口广告展示的位置坐标和窗口的宽
+// 展示窗口广告
 // point：窗口广告原点坐标
 // width：窗口广告宽度。高度由对应比例计算，无需设置。
 // transformAngle： 窗口广告倾斜角度
