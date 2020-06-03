@@ -9,16 +9,19 @@ PODS:
     - AppCenter/Core
   - AtmosplayAds (3.2.1)
   - Masonry (1.1.0)
+  - QRCodeReaderViewController (4.0.2)
 
 DEPENDENCIES:
   - AppCenter
   - AtmosplayAds
   - Masonry
+  - QRCodeReaderViewController
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AppCenter
     - Masonry
+    - QRCodeReaderViewController
   https://github.com/yumimobi/Specs.git:
     - AtmosplayAds
 
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   AppCenter: ca66175050d538b157959382dd43f1ab96cdab84
   AtmosplayAds: 75cfacea3d524c907224560c0cb5c807d5074d82
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  QRCodeReaderViewController: e8f27d035b3e72b1d4b1c61ff66458287e3be0ff
 
-PODFILE CHECKSUM: 7fc74fa85b8604cbf0c76992f68fe9b63cb0420a
+PODFILE CHECKSUM: 2519771d47f7cc867fb986aff5a47eeed0801ed8
 
 COCOAPODS: 1.8.4
